@@ -1,0 +1,87 @@
+/* Variables */
+@import "colors";
+@import "nav";
+$padding-small: 1em;
+$padding-large: 2em;
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+}
+
+@mixin nomargin {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, Sans-Serif;
+    background: $yellow;
+    color: #000;
+}
+
+/* Nest Main */
+main {
+    width: 1350px;
+    min-height:535px;
+    background-color: $white;
+    padding: $padding-small;
+    margin: 0 auto;
+    @include flex;     
+
+    #intro-text {
+        width: 40%;
+        padding: $padding-small;
+        font-size: 1.2rem;
+        background-color: $lightgrey;
+        @include flex;
+        @include nomargin;
+        flex-direction: column;
+        align-items: center;
+        span {
+            font-family:'Sacramento', cursive;
+            font-size: 2em;
+        }
+        p {
+            font-size: 0.9rem;
+        }
+        button {
+            background-color: $yellow;
+            color: $white;
+            border: 0;
+            cursor: pointer;
+            width: 8em;
+            height: 2.5em;
+            font-size: 1rem;
+            margin-top: $padding-small;
+            &:hover {
+                background-color: $lightgreen;
+                color: $darkgrey;
+            }
+        }
+    }
+
+    #intro-image {
+        width: 60%;
+        padding: $padding-small;
+        @include nomargin;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+
+}
+footer {
+    padding: $padding-large;
+    font-size: 0.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+
+// Mixin or Extend for button
